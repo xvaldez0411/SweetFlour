@@ -10,6 +10,7 @@ app.use(express.urlencoded({extended:true}))
 require('./config/mongoose.config')
 
 require('./routes/signature.route')(app)
+require('./routes/custom.route')(app)
 
 
 app.listen(port, () => console.log(`Locked and loaded on port: ${port}`))
