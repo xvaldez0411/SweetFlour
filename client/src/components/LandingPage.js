@@ -1,8 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Typography, BottomNavigation, CssBaseline, Container} from '@mui/material'
+import {Typography, BottomNavigation, CssBaseline, Container, Box} from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import '../styles/LandingPage.css'
+import logo from '../images/sf_logo.PNG'
 const LandingPage = () => {
 
   return (
@@ -10,9 +11,19 @@ const LandingPage = () => {
     <CssBaseline/>
       <header>
         <div>
-          <Typography variant="h2" align="center">
-              SWEET FLOUR
-          </Typography>
+          <div className="logo">
+            <Box
+              component = "img"
+              sx={{
+                height: 233,
+                width: 350,
+                maxHeight: { xs: 233, md: 350 },
+                maxWidth: { xs: 350, md: 500 },
+              }}
+              alt="SweetFlour Logo"
+              src={logo}
+            />
+          </div>
           <div className="link-bar">
           <a href='http://www.instagram.com/sweetflourcupcakerie'><InstagramIcon fontSize='medium'/></a>
           <Link to = {'/gallery'}>Gallery</Link> {/*add route on where to go */}
@@ -20,6 +31,7 @@ const LandingPage = () => {
           </div>
         </div>
       </header>
+      <main></main>
     </>
   )
 }
