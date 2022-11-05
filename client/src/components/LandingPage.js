@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {Typography, BottomNavigation, CssBaseline, Container, Box} from '@mui/material'
+import {Typography, CssBaseline, Container, Box, Grid, Card, CardContent,CardActions, CardMedia, Button} from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import '../styles/LandingPage.css'
 import logo from '../images/sf_logo.PNG'
@@ -25,13 +25,37 @@ const LandingPage = () => {
             />
           </div>
           <div className="link-bar">
-          <a href='http://www.instagram.com/sweetflourcupcakerie'><InstagramIcon fontSize='medium'/></a>
-          <Link to = {'/gallery'}>Gallery</Link> {/*add route on where to go */}
-          <Link to = {'/contactus'}>Contact Us</Link> {/*add route on where to go */}
+          <a href='http://www.instagram.com/sweetflourcupcakerie' className="link"><InstagramIcon fontSize='medium'/></a>
+          <Link to = {'/gallery'} className="link">Gallery</Link> {/*add route on where to go */}
+          <Link to = {'/contactus'} className="link">Contact Us</Link> {/*add route on where to go */}
           </div>
         </div>
       </header>
-      <main></main>
+      <main>
+          <Container maxWidth="md">
+            <Grid container>
+              <Grid item>
+                <Card sx={{ maxWidth: 400}}>
+                  <CardMedia
+                    component = "img"
+                    image = "https://source.unsplash.com/random"
+                    title = "image title"
+                  />
+                </Card>
+              </Grid>
+              <div>
+                <CardContent>
+                  <Typography gutterBottom variant = "h7" paragraph>
+                    hello, this is an example of what is going here after we decide what to write hello, this is an example of what is going here after we decide what to write hello, this is an example of what is going here after we decide what to write hello, this is an example of what is going here after we decide what to write hello, this is an example of what is going here after we decide what to write hello, this is an example of what is going here after we decide what to write 
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link to = {"/signature/order"}><Button size="small">Order Signature Cupcakes</Button></Link>
+                </CardActions>
+              </div>
+            </Grid>
+          </Container>
+      </main>
     </>
   )
 }
