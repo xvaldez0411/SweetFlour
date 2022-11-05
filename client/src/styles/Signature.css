@@ -22,11 +22,6 @@
     margin: auto;
     margin-top: 10px;
 }
-
-.signature-card {
-    margin-bottom: 25px;
-}
-
  /* RESPONSIVE */
 @media only screen and (max-width: 770px) {
     .link-bar {
