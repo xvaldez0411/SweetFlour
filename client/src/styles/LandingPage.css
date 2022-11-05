@@ -6,6 +6,12 @@
     margin: auto;
 }
 
+.logo {
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
 @media only screen and (max-width: 770px) {
     .link-bar {
         display: flex;
